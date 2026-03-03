@@ -7,15 +7,13 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <header>
 <nav class="navbar">
-
 <div class="nav-left">
 <h2 class="logo">Sneha</h2>
 </div>
@@ -33,17 +31,14 @@
 <i class="fa fa-bars"></i>
 </div>
 </div>
-
 </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
 <h1>Search Your Projects</h1>
-
 <form class="search-form" id="searchForm">
 <label for="searchInput">Search</label>
-
 <div class="search-box">
 <input type="text" id="searchInput" placeholder="Enter project name..." required>
 <button type="submit" class="btn btn-primary">
@@ -56,9 +51,7 @@
 <!-- DAY 6 PROJECT GRID -->
 <section class="projects">
 <h2>My Projects</h2>
-
 <div class="project-grid">
-
 <div class="project-card">
 <img src="https://picsum.photos/300/200" alt="">
 <h3>Portfolio Website</h3>
@@ -69,36 +62,33 @@
 <div class="project-card">
 <img src="https://picsum.photos/301/200" alt="">
 <h3>Ecommerce UI</h3>
-<p>This project contains product cards and responsive layout using flexbox and css grid.</p>
+<p>Responsive ecommerce layout with cards.</p>
 <button class="btn btn-outline">View Project</button>
 </div>
 
 <div class="project-card">
 <img src="https://picsum.photos/302/200" alt="">
 <h3>Admin Dashboard</h3>
-<p>Dashboard UI with sidebar, navbar and data cards created for learning purpose.</p>
+<p>Dashboard UI built using CSS Grid.</p>
 <button class="btn btn-outline">View Project</button>
 </div>
-
 </div>
 </section>
 
-<main>
-
+<!-- DAY 7 NOTIFICATION PLAYGROUND -->
 <section class="card">
-<h2>My Frontend Journey</h2>
-<ul>
-<li>Day 1: Setup & Deployment (Completed)</li>
-</ul>
+<h2>Notification Playground</h2>
+<button class="btn btn-primary" id="successBtn">Trigger Success</button>
+<button class="btn btn-outline" id="errorBtn">Trigger Error</button>
 </section>
-
-</main>
 
 <footer>
 <p>© 2026 Sneha Thakor</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toastContainer"></div>
 
+<script src="js/script.js"></script>
 </body>
 </html>
