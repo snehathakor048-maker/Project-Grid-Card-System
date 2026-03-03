@@ -283,3 +283,48 @@ margin-top:auto;
 grid-template-columns:1fr;
 }
 }
+
+
+/* TOAST SYSTEM */
+
+.toast-container{
+position:fixed;
+top:20px;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+z-index:999;
+}
+
+.toast{
+min-width:250px;
+padding:12px 15px;
+border-radius:6px;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+animation:slideIn 0.3s ease;
+}
+
+.toast-success{
+background:#28a745;
+}
+
+.toast-error{
+background:#dc3545;
+}
+
+.toast button{
+background:none;
+border:none;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+@keyframes slideIn{
+from{transform:translateX(100%);opacity:0;}
+to{transform:translateX(0);opacity:1;}
+}
