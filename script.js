@@ -1,35 +1,30 @@
 /* NAVBAR */
+
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("navMenu");
-const links = document.querySelectorAll(".nav-link");
 
 hamburger.addEventListener("click", () => {
 navMenu.classList.toggle("active");
 document.body.classList.toggle("no-scroll");
 });
 
-links.forEach(link=>{
-link.addEventListener("click", ()=>{
-navMenu.classList.remove("active");
-document.body.classList.remove("no-scroll");
-});
-});
-
 /* SEARCH */
+
 const form = document.getElementById("searchbox");
 const input = document.getElementById("searchInput");
 
 form.addEventListener("submit",(e)=>{
 e.preventDefault();
+
 if(input.value===""){
 alert("Please enter a search term");
 }else{
 console.log("Searching for:",input.value);
 }
+
 });
 
-
-
+/* CONTACT VALIDATION */
 
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
@@ -78,7 +73,7 @@ messageInput.classList.remove("error");
 messageInput.classList.add("success");
 }
 
-submitBtn.disabled = !valid;
+submitBtn.disabled=!valid;
 
 }
 
@@ -86,18 +81,13 @@ nameInput.addEventListener("input",validateForm);
 emailInput.addEventListener("input",validateForm);
 messageInput.addEventListener("input",validateForm);
 
-errorBtn.addEventListener("click",()=>{
-createToast("error","Something went wrong!");
-});
-
-
 /* BACK TO TOP */
 
-const backToTopBtn = document.getElementById("backToTop");
+const backToTopBtn=document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",()=>{
 
-if(window.scrollY > 500){
+if(window.scrollY > 200){
 backToTopBtn.classList.add("show");
 }else{
 backToTopBtn.classList.remove("show");
@@ -105,7 +95,7 @@ backToTopBtn.classList.remove("show");
 
 });
 
-backToTopBtn.addEventListener("click", () => {
+backToTopBtn.addEventListener("click",()=>{
 
 window.scrollTo({
 top:0,
