@@ -126,3 +126,27 @@ messageInput.addEventListener("input",validateForm);
 errorBtn.addEventListener("click",()=>{
 createToast("error","Something went wrong!");
 });
+
+
+/* BACK TO TOP */
+
+const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 500){
+backToTopBtn.classList.add("show");
+}else{
+backToTopBtn.classList.remove("show");
+}
+
+});
+
+backToTopBtn.addEventListener("click", () => {
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
