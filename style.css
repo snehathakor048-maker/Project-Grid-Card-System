@@ -443,3 +443,36 @@ text-align:center;
 }
 
 }
+
+
+/* BACK TO TOP */
+
+.back-to-top{
+position:fixed;
+bottom:30px;
+right:30px;
+background:var(--primary-color);
+color:white;
+border:none;
+width:45px;
+height:45px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+pointer-events:none;
+transition:0.3s;
+z-index:500;
+}
+
+.back-to-top.show{
+opacity:1;
+pointer-events:auto;
+}
+
+.back-to-top:hover{
+transform:scale(1.1);
+}
