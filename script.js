@@ -16,7 +16,7 @@ document.body.classList.remove("no-scroll");
 });
 
 /* SEARCH */
-const form = document.getElementById("searchForm");
+const form = document.getElementById("searchbox");
 const input = document.getElementById("searchInput");
 
 form.addEventListener("submit",(e)=>{
@@ -28,44 +28,7 @@ console.log("Searching for:",input.value);
 }
 });
 
-/* TOAST SYSTEM */
 
-const toastContainer = document.getElementById("toastContainer");
-const successBtn = document.getElementById("successBtn");
-const errorBtn = document.getElementById("errorBtn");
-
-function createToast(type,message){
-
-const toast = document.createElement("div");
-toast.classList.add("toast");
-
-if(type==="success"){
-toast.classList.add("toast-success");
-toast.innerHTML=`<span>✔ ${message}</span>`;
-}else{
-toast.classList.add("toast-error");
-toast.innerHTML=`<span>⚠ ${message}</span>`;
-}
-
-const closeBtn=document.createElement("button");
-closeBtn.innerText="X";
-
-closeBtn.addEventListener("click",()=>{
-toast.remove();
-});
-
-toast.appendChild(closeBtn);
-toastContainer.appendChild(toast);
-
-/* Auto Dismiss */
-setTimeout(()=>{
-toast.remove();
-},3000);
-}
-
-successBtn.addEventListener("click",()=>{
-createToast("success","Operation Successful!");
-});
 
 
 const nameInput = document.getElementById("name");
